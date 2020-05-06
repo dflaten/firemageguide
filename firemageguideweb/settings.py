@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'web',
     'firemageguideweb',
     #fix bootstrap as when these are uncommented an error occurs. 
-#    'bootstrap4',
-#    'django_icons',
+    'bootstrap4',
+    'django_icons',
 ]
 
 MIDDLEWARE = [
