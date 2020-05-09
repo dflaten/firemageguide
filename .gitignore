@@ -54,3 +54,5 @@ docs/_build/
 #Mac Specific
 **/.DS_Store
 
+#
+**/.env.dev
