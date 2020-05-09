@@ -1,235 +1,449 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}
-    Index
-{% endblock %}
-{% block css %}
-<!-- add after bootstrap.min.css -->
-
-{% endblock %}	
-{% block body %}
-<div class="container">
+  {% extends 'base.html' %} {% load static %} {% block title %}
+  Index {% endblock %} {% block css %} 
+  <!-- add after bootstrap.min.css -->
+   {% endblock %} {% block body %}
+  <div class="container">
     <div class="row">
       <!-- sidebar, which will move to the top on a small screen -->
       <div class="col-sm-3">
         <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
       </div>
-<div class ="col-sm-9" style = "white-space:pre-wrap;">
-<h1>Classic WOW Fire Mage Guide </h1>
-This is a guide I’ve created based on information from the Mage Discord, Wowhead, and other sources.
+      <div class="col-sm-9" style="">
+        <h1>Classic WOW Fire Mage Guide</h1><p class ="maintext">This is a guide I’ve
+        created based on information from the Mage Discord,
+	Wowhead, and other sources.</p>
+        <h2>Intro</h2><p class ="maintext">I’m putting together this guide so mages in my guild have a 
+         comprehensive guide that covers what they
+        need to know for raiding as a fire mage in World of
+        Warcraft Classic. The information comes from various
+        sources listed in the credit. The details I’m outlining
+        below have been tailored to our guild, especially the
+        “short version” sections. The short version includes
+        assumptions unique to our guild such as how many mages we
+        are running, gearing of those mages and our ability
+	(inability :P) to keep world buffs.</p>
+        <h2>Talent Builds</h2>
+        <h3>When to respec to Fire?</h3><p class ="maintext">When Phase 5 (Ahn'Qiraj
+        Raid) is released all mages should respec from Frost to
+        Fire. If a few mages in the guild wish to respec to Fire in
+        P4 it should be fine but many bosses and mobs are Fire
+	immune or resistant in MC and BWL so parses will suffer.</p>
+        <h3>Low Gear / Mana Build</h3><a href=
+        "https://classic.wowhead.com/talent-calc/mage/230055000002-5052020023033051-003">[LINK]</a>
+        <p class ="maintext">This build is used when gearing up for fire and going out
+        of mana is a problem. The maxed out magic absorption
+        tallents provide additional spell resists and a small
+        amount of mana returned. The 2 / 3 points in Arcane
+	Meditation allows mana regeneration during casting.</p>
+        <h3>Standard Build</h3><a href=
+        "https://classic.wowhead.com/talent-calc/mage/230025-5052023123033151-003">[LINK]</a>
+        This build takes points away from mana generation and puts
+        them into fire AOE damage talents. Improved Flamestrike
+        increases the crit chance of flamestrike by 15%, Pyroblast
+        gives access to Blastwave which is similar to Arcane
+        Explosion but fire damage and on a 45s cooldown.
+        <h2>Spell Rotation</h2><p class ="maintext">The rotations below are focused on
+        maximizing damage in the best case scenario and may need to
+	be tweaked depending on the situation.</p>
+        <h3>Single Target Rotation</h3><p class ="maintext">The rotation for fire is not
+        as simple as frost and a few abilities must be understood
+        in order to maximize dps as a fire mage. I’m placing the
+        short version first and then will describe what is
+        happening in detail in the next section. If we do our jobs
+        as fire mages well we will see a significant increase in
+        our DPS so much so that threat management will be a big
+	issue.</p>
+        <h4>Short Version</h4>
+        <ol>
+          <li>Scorch from each mage so 5 stacks of Improved Scorch
+          are on the boss.</li>
+          <li>Pyroblast. (To give time for Ignite to fall off the
+          boss as well as start a new Ignite with some big
+          hits)</li>
+          <li>Fireball (This one you repeat unless Improved Scorch
+          falls off the boss, your new Frostbolt).</li>
+          <li>One Person casts scorch every 30 seconds to keep
+          Improved Scorch on boss.</li>
+        </ol>
+        <h4>Detailed Version</h4><p class ="maintext">The single target mage rotation is
+        designed around the upkeep and management of two debuffs.
+        The first being ‘Improved Scorch’ which increases the fire
+        damage on the target by 15%. The second being ‘Ignite’
+        which is a damage over time (DOT) which does damage based
+        on critical fire spells that are landed on the target.
+	Scorch and the Improved Scorch Talents are listed below.</p>
+	<table class = "spelltable" > 
+	  <tbody>
+            <tr>
+	      <td  class="font-weight-bold">Scorch</td>
+	      <td>Rank 7</td>
+	    </tr>
+	    <tr>
+	      <td><img src="{%static "web/spell_fire_soulburn.jpg" %}"></td>
+	      <td > 30yd range</td>
+	    </tr>
+	      <td>150 mana</td>
+	    <tr>
+	      <td>1.5 second cast</td>
+	    </tr>
+	    </tr>
+	      <td>Scorch the enemy for 237 to 280 Fire damage.</td>
+	    </tr>
+	  </tbody>
+        </table>
 
-<h2> Intro</h2>
-I’m putting together this guide because I haven’t found a comprehensive guide that covers what you need to know for raiding as a fire mage in World of Warcraft Classic. The information comes from various sources listed in the credit.
-The details I’m outlining below have been tailored to our guild, especially the “short version” sections. The short version includes assumptions unique to our guild such as how many mages we are running, gearing of those mages and our ability (inability :P) to keep world buffs.
+	<table class = "spelltable" > 
+	  <tbody>
+            <tr>
+	      <td  class="font-weight-bold">Improved Scorch </td>
+	      <td>Rank 3</td>
+	    </tr>
+	    <tr>
+	      <td><img src="{%static "web/spell_fire_soulburn.jpg" %}"></td>
+	      <td > Passive</td>
+	    </tr>
+	      <td>Your
+        Scorch spells have a 100% chance to cause your target to be
+        vulnerable to Fire damage. This vulnerability increases the
+        Fire damage dealt to your target by 3% and lasts 30 sec.
+        Stacks up to 5 times.</td>
+	    </tr>
+	  </tbody>
+        </table>
+	<span></span>
+	<p class ="maintext">When a fight starts all mages should cast 1 scorch each to get 5 stacks of Improved Scorch
+        stacked on the boss. The debuff from Improved Scorch must
+        be refreshed every 30s by a scorch being cast on the boss.
+        One mage should be responsible for doing this. 
+	<table class = "spelltable" > 
+	  <tbody>
+            <tr>
+	      <td  class="font-weight-bold">Ignite DOT</td>
+	      <td>Rank 5</td>
+	    </tr>
+	    <tr>
+	      <td><img src="{%static "web/spell_fire_incinerate.jpg" %}"></td>
+	      <td > Debuff</td>
+	    </tr>
+	    </tr>
+	      <td>Your critical strikes from Fire damage spells
+        cause the target to burn for an additional 40% of your
+        spell's damage over 4 sec.</td>
+	    </tr>
+	  </tbody>
+        </table>
+        <p class ="maintext">Ignite is a shared debuff across
+        all fire mages who have the talent and is applied to the
+        boss up to five times. Ignite lasts 4 seconds and must be
+        refreshed by a new crit in the 4 second window or it will
+        fall off. The new crits don’t change ignite damage being
+        burned but instead just refresh the 4 sec timer. This means
+        the first 5 crits that stack for an ignite should be from a
+        big damage spell like Fireball instead of Scorch. The mage
+        that crits first to apply the debuff will own all of the
+        aggro generated by the Ignite until that Ignite falls off.
+        According to the Warcraft Logs discord the damage done by
+        Ignite should be shared across all mages in the logs but we
+        will need to verify this after our first few raids as Fire.
+        In summary here are two things we need to do as mages
+        because of this spell. Maximize the damage of the 5 crits
+        which are burning the damage in ignite. Keep the ignite
+        debuff up for as long as possible or until the aggro from
+        the first mage to crit becomes great enough to risk putting
+        them over the tank. Keeping the Ignite up can be done more
+        easily with a little bit of coordination when using the
+	Damage Cooldown for fire, Combustion.</p>  
+	<table class = "spelltable" > 
+	  <tbody>
+            <tr>
+	      <td  class="font-weight-bold">Combustion</td>
+	      <td>Talent</td>
+	    </tr>
+	    <tr>
+	      <td><img src="{%static "web/spell_fire_sealoffire.jpg" %}"></td>
+	      <td > Instant</td>
+	    </tr>
+	    </tr>
+	      <td>When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%.  This effect lasts until you have caused 3 critical strikes with Fire spells.
+	</td>
+	    </tr>
+	  </tbody>
+        </table>
+       
+        <p class ="maintext">To maximize how long our ignite lasts an order in the mages
+        needs to be established on when this cd will be popped. For
+        example: As soon as we have five stacks of Ignite on a Boss
+        Mage 1 pops their combustion CD. 10 seconds later Mage 2
+        pops their Combustion CD. 10 seconds later Mage 3 pops
+        their Combustion CD.. and so on. If we mages are doing a
+        very good job of keeping a big Ignite up our problem will
+        be aggro management for the first mage who starts the
+        ignite. We may need to stop casting fire spells until
+        ignite falls off and then start a new one with another mage
+	getting the first crit.</p>
+        <h3>AOE Rotation</h3>[TO DO]
+        <h2>Gear & Itemization</h2><p class ="maintext">Best in Slot (BIS) lists such as
+	the one <a href="https://docs.google.com/spreadsheets/d/1uCXQni8Ndf0RuKfgNUlQ_jzfKIYmsCVuYXS_P3OaKUY/htmlview?ouid=107345752012788050724&usp=sheets_home&ths=true#"> here </a> or <a href="https://classic.wowhead.com/guides/mage-dps-gear-bis-classic-wow"> wowhead </a>are helpful to know which pieces of
+        gear to aim for however don’t get tunnel vision shooting
+        for these pieces. These lists may be showing slightly
+        incorrect data or are so focused on getting the BIS pieces
+        that you may miss out on close equivalents. Instead of
+        focusing on pieces of gear this guide will show which stats
+        you should prioritize. You should look at possible drops
+        from bosses using something like the addon,
+        AtlasLootClassic, and compare them to what you have on you
+        now. You can also search for gear for a specific slot using
+        a site like wowhead to find potential replacements for hard
+        to get BIS pieces. The question that must be answered...
+        When comparing gear what stats should you focus on and how
+	should you determine if a piece of gear is an upgrade?</p>
+        <h3>Short Version</h3><p class ="maintext">Disclaimer: I will simplify things in
+        the short version for those that want to do fairly well but
+        don’t care to take all the time to understand. To help
+        determine which pieces of gear are an upgrade all stats are
+        converted to Spell Power (SP). When determining if a piece
+        of gear is an upgrade use this table to convert your
+        current gear’s total SP to the new piece of gear and
+        compare. 
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Stat</th>
+      <th scope="col">Example</th>
+      <th scope="col">SP Equivalent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">SP</td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td scope="row">Int</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td scope="row">Hit</td>
+      <td>1%</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td scope="row">Crit</td>
+      <td>1%</td>
+      <td>13</td>
+    </tr>
+  </tbody>
+</table>
+        <h3>Detailed Version</h3><p class ="maintext">This description of gearing and
+        itemization will not be all encompassing. Effects and procs
+        such as the proc on full mage T2 will be left out although
+        they can provide a good alternative gearing option. Instead
+        I will be describing why the stats are important and what
+        they provide and ultimately convert all of the stats to
+	one, SP to make gear comparisons easier.</p>
+        <h4>Spell Power</h4><p class ="maintext">Spell Power increases the base damage
+        of spells by the amount listed on the gear times a
+        coefficient which is different for each spell. For Frost or
+        Fire maximizing Spell Power is the primary goal when
+        gearing your mage. To make sense of the table below here is
+        an example. Say you have a piece of gear with 100 SP on it.
+        Your Fireballs now do 100 more damage each cast but your
+	scorch only does an extra 42.85 damage each cast. </p>
 
-<h2>Talent Builds</h2>
-<h3>When to respec to Fire?</h3>
-When Phase 5 (Ahn'Qiraj Raid) is released all mages should respec from Frost to Fire. If a few mages in the guild wish to respec to Fire in P4 it should be fine but many bosses and mobs are Fire immune or resistant in MC and BWL so parses will suffer.
-<h3>Low Gear / Mana Build</h3>
-<a href="https://classic.wowhead.com/talent-calc/mage/230055000002-5052020023033051-003">[LINK]</a>
-This build is used when gearing up for fire and going out of mana is a problem.
-The maxed out magic absorption tallents provide additional spell resists and a small amount of mana returned. The 2 / 3 points in Arcane Meditation allows mana regeneration during casting.
-<h3>Standard Build</h3>
-<a href="https://classic.wowhead.com/talent-calc/mage/230025-5052023123033151-003">[LINK]</a>
-This build takes points away from mana generation and puts them into fire AOE damage talents.
-
-Improved Flamestrike increases the crit chance of flamestrike by 15%, Pyroblast gives access to Blastwave which is similar to Arcane Explosion but fire damage and on a 45s cooldown.
-<h2>Spell Rotation</h2>
-The rotations below are focused on maximizing damage in the best case scenario and may need to be tweaked depending on the situation.
-<h3>Single Target Rotation</h3>
-The rotation for fire is not as simple as frost and a few abilities must be understood in order to maximize dps as a fire mage. I’m placing the short version first and then will describe what is happening in detail in the next section. If we do our jobs as fire mages well we will see a significant increase in our DPS so much so that threat management will be a big issue.
-
-<h4>Short Version</h4>
-<ol>
-	<li>Scorch from each mage so 5 stacks of Improved Scorch are on the boss.</li>
-	<li> Pyroblast. (To give time for Ignite to fall off the boss as well as start a new Ignite with some big hits)</li>
-	<li>Fireball (This one you repeat unless Improved Scorch falls off the boss, your new Frostbolt).</li>
-	<li>One Person casts scorch every 30 seconds to keep Improved Scorch on boss.</li>
-</ol>
-<h4>Detailed Version</h4>
-The single target mage rotation is designed around the upkeep and management of two debuffs. The first being ‘Improved Scorch’ which increases the fire damage on the target by 15%. The second being ‘Ignite’ which is a damage over time (DOT) which does damage based on critical fire spells that are landed on the target.
-
-Scorch and the Improved Scorch Talents are listed below.
-
-Scorch
-
-150 Mana
-30 yd range
-1.5 sec cast
-
-Scorch the enemy for 237 to 280 Fire damage
-
-Improved Scorch
-
-Passive
-
-Your Scorch spells have a 100% chance to cause your target to be vulnerable to Fire damage.  This vulnerability increases the Fire damage dealt to your target by 3% and lasts 30 sec.  Stacks up to 5 times.
-
-When a fight starts all mages should cast 1 scorch each to get 5 stacks of Improved Scorch stacked on the boss. The debuff from Improved Scorch must be refreshed every 30s by a scorch being cast on the boss. One mage should be responsible for doing this.
-
-Ignite
-
-DOT (Debuff)
-
-Your critical strikes from Fire damage spells cause the target to burn for an additional 40% of your spell's damage over 4 sec.
-
-Ignite is a shared debuff across all fire mages who have the talent and is applied to the boss up to five times. Ignite lasts 4 seconds and must be refreshed by a new crit in the 4 second window or it will fall off. The new crits don’t change ignite damage being burned but instead  just refresh the 4 sec timer. This means the first 5 crits that stack for an ignite should be from a big damage spell like Fireball instead of Scorch.
-
-The mage that crits first to apply the debuff will own all of the aggro generated by the Ignite until that Ignite falls off. According to the Warcraft Logs’ discord the damage done by Ignite should be shared across all mages in the logs but we will need to verify this after our first few raids as Fire.
-
-In summary here are two things we need to do as mages because of this spell.
-
-Maximize the damage of the 5 crits which are burning the damage in ignite.
-Keep the ignite debuff up for as long as possible or until the aggro from the first mage to crit becomes great enough to risk putting them over the tank.
-
-Keeping the Ignite up can be done more easily with a little bit of coordination when using the Damage Cooldown for fire, Combustion.
-
-Combustion
-
-
-Instant 3 min cooldown
-
-When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%.  This effect lasts until you have caused 3 critical strikes with Fire spells.
-
-To maximize how long our ignite lasts an order in the mages needs to be established on when this cd will be popped. For example:
-
-As soon as we have five stacks of Ignite on a Boss Mage 1 pops their combustion CD.
-10 seconds later Mage 2 pops their Combustion CD.
-10 seconds later Mage 3 pops their Combustion CD.. and so on.
-
-If we mages are doing a very good job of keeping a big Ignite up our problem will be aggro management for the first mage who starts the ignite. We may need to stop casting fire spells until ignite falls off and then start a new one with another mage getting the first crit.
-<h3>AOE Rotation</h3>
-[TO DO]
-<h2>Gear & Itemization</h2>
-Best in Slot (BIS) lists such as the one here or wowhead are helpful to know which pieces of gear to aim for however don’t get tunnel vision shooting for these pieces. These lists may be showing slightly incorrect data or are so focused on getting the BIS pieces that you may miss out on close equivalents. Instead of focusing on pieces of gear this guide will show which stats you should prioritize. You should look at possible drops from bosses using something like the addon, AtlasLootClassic, and compare them to what you have on you now.  You can also search for gear for a specific slot using a site like wowhead to find potential replacements for hard to get BIS pieces.
-
-The question that must be answered...
-When comparing gear what stats should you focus on and how should you determine if a piece of gear is an upgrade?
-
-<h3>Short Version</h3>
-Disclaimer: I will simplify things in the short version for those that want to do fairly well but don’t care to take all the time to understand.
-
-To help determine which pieces of gear are an upgrade all stats are converted to Spell Power (SP). When determining if a piece of gear is an upgrade use this table to convert your current gear’s total SP to the new piece of gear and compare.
-
-
-Stat
-Example
-SP Equivalent
-SP
-10
-10
-Int
-10
-1
-Hit
-1%
-12
-Crit
-1%
-13
-
-<h3>Detailed Version</h3>
-
-This description of gearing and itemization will not be all encompassing. Effects and procs such as the proc on full mage T2 will be left out although they can provide a good alternative gearing option. Instead I will be describing why the stats are important and what they provide and ultimately convert all of the stats to one, SP to make gear comparisons easier.
-<h4>Spell Power</h4>
-
-Spell Power increases the base damage of spells by the amount listed on the gear times a coefficient which is different for each spell. For Frost or Fire maximizing Spell Power is the primary goal when gearing your mage. To make sense of the table below here is an example. Say you have a piece of gear with 100 SP on it. Your Fireballs now do 100 more damage each cast but your scorch only does an extra 42.85 damage each cast.
-
-Spell
-Coefficient
-Fireball Direct
-3.5/3.5 - 100%
-Fireball Dot
-0%
-Pyroblast Direct
-3.5/3.5 - 100%
-Pyroblast Dot
-70% - 17.5% per tick (4)
-Scorch
-1.5/3.5 - 42.85%
-Fire Blast
-1.5/3.5 - 42.85%
-Blast Wave
-1.5/3.5/3*0.95 - 13.57%
-Flamestrike Direct
-(3/3.5)*(3/3.5) / (3/3.5 + 8/15) / 3 = 17.61%
-Flamestrike DoT
-(8/15)*(8/15) / (3/3.5 + 8/15) / 3 = 6.81% - 1,70% per tick (4)
-Frostbolt
-3/3.5*0.95 - 81.4%
-Frost Nova
-1.5/3.5/3*0.95 - 13.57%
-Cone of Cold
-1.5/3.5/3*0.95 - 13.57%
-Blizzard
-3.5/3.5/3 - 33% - 4.125% per tick (8
-Arcane Explosion
-1.5/3.5/3 - 14.28%
-Arcane Missiles
-3.5/3.5 - 100% - 20% per missile (5)
-Ice Barrier
-0.1 - 10%
-
-<h4>Intellect</h4>
-
-Intellect provides two things to mages, mana and critical strike chance. At level 60 1 Int = 15 mana and 59.5 Int = 1% crit.
-Critical Hit Chance
-Critical Hit chance increases the rate at which your spells will hit for a critical (1.5 times normal damage). For example having a 40% critical hit chance means your spells have a 40% chance of hitting for 150% of their normal damage.
-
-[TODO: WHY CRIT IS SO GOOD FOR FIRE MAGES]
-<h4>Hit Chance</h4>
-
-Spells in classic wow have a chance to “miss” the target resulting in a “resist” when you are casting. This chance increases for every level the target is above a caster’s level. Getting extra spell hit can reduce the chance by up to 99%. No matter how much hit you get, vs any level, you will always have a 1% chance for a resist to occur. At 60 vs level 60 targets a mage has a 96% chance to hit a target. By obtaining an extra 3% hit a mage can get their hit to the cap at 99%. Most bosses in raids however are above level 60 and will show as a 💀 instead of a level. Mages have a 17% chance of missing against these targets and must get an additional 16% hit to get to cap. After that additional hit will do no good.
-
-Resists are one of the biggest ways to reduce your DPS. Instead of doing ~800 for a normal frost bolt for example if you “miss” you will do 0. This is why hit chance is worth so much in terms of spell Power.
-
-With both specs in this doc the talent points in Elemental Precision give 6% extra hit so mages need to get 10% hit from gear to get their max. Depending on the addon you are using to show your spell hit chance it may or may not be taking the hit from talents into consideration when displaying your spell hit chance.
-
-<h4>Putting It All Together</h4>
-
-Frost has useful tables and spreadsheets like this one to help determine which pieces of gear are an upgrade. Eventually I plan on building or finding something similar to fire. Theorycrafters in the mage discord are working on building the weights for different stats as you can see here.
-
-Because of ignite the way that crit and hit are weighted especially crit can fluctuate depending on the number of mages in a raid and which/how many world buffs you have and the hit percent across all the mages. The more mages and more world buffs you have the less valuable crit/hit becomes.
-
-Crit varies from 10 - 20 SP per 1% crit and hit can be from 10 - 17 SP per 1% hit depending on the number of mages, world buffs, and crit percent for each mage.
-<h2>Consumables</h2>
-
-Our guild does not currently require DPS to use consumables but they can make a big difference on your performance in raids. The Buffs & Consumables sheet on this google sheet is a good reference. If we start to struggle in AQ or Naxx they could become a requirement. I’ll call out a couple that are super important.
-
-
-Limited Invulnerability Potion(LIP)
-
-
-
-Use: Imbiber is immune to physical attacks for the next 6 sec. (cooldown 2 min)
-
-LIPs are very important because in addition to making you invulnerable your aggro is temporarily dropped to 0 while the potion is active (6 seconds). This gives your tank some time to get their aggro back above yours. However you should know any aggro you generate during those 6 seconds will come back on top of whatever you had when the potion went active. In practice this means when you pull aggro you should: 1) Take a LIP 2) Stop DPSing and hope your tank produces a bunch of aggro in the next 6 seconds.
-
-[MANA GEMS PLACEHOLDER]
-<h2>Enchants</h2>
-
-The enchant sheet on this google sheet is a good reference to refer to when determining which enchants you should get. The most impactful enchants for your gear are the Presence of Sight enchants from the Zul'Gurub but I encourage you to get all enchants.
-<h2>Addons & Weak Auras</h2>
-
-Deadly Boss Mods - Every raider should have this addon. This gives you timers, warnings, etc to help keep track of things in a raid.
-
-Details! - This is a DPS tracking addon but the most important functionality that it provides is a plugin, a threat meter called Tiny Threat. Make sure you enable it.
-
-Ignite Tracker (Weak Aura)
-
-Extended Character Stats - Addon which shows more stats than the normal character screen including what your total hit percent is and extra damage by spell type.
-
-AtlasLootClassic - This addon allows you to see which bosses drop which pieces of gear from the raids in Classic.
-<h2>Credits</h2>
-
-As noted above I put this information together from various sources. I’ll list them below.
-
-Wowhead
-VanillaWow DB
-Mage Discord - Special thanks to @Always, @Twizzles, ronkubymage
-
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Spell</th>
+      <th scope="col">Coefficient</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">Fireball Direct</td>
+      <td>3.5/3.5 - 100%</td>
+    </tr>
+    <tr>
+      <td scope="row">Fireball Dot</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <td scope="row">Pyroblast Direct</td>
+      <td>3.5/3.5 - 100%</td>
+    </tr>
+    <tr>
+      <td scope="row">Pyroblast Dot</td>
+      <td>70% - 17.5% per tick (4)</td>
+    </tr>
+    <tr>
+      <td scope="row">Scorch</td>
+      <td>1.5/3.5 - 42.85%</td>
+    </tr>
+    <tr>
+      <td scope="row">Fire Blast</td>
+      <td>1.5/3.5 - 42.85%<td>
+    </tr>
+    <tr>
+      <td scope="row">Blast Wave</td>
+      <td>1.5/3.5/3*0.95 - 13.57%<td>
+    </tr>
+    <tr>
+      <td scope="row">Flamestrike Direct</td>
+      <td>(3/3.5)*(3/3.5) / (3/3.5 + 8/15) / 3 = 17.61%<td>
+    </tr>
+    <tr>
+      <td scope="row">Flamestrike DOT</td>
+      <td>(8/15)*(8/15) / (3/3.5 + 8/15) / 3 = 6.81% - 1,70% per tick (4)<td>
+    </tr>
+    <tr>
+      <td scope="row">Frostbolt</td>
+      <td>3/3.5*0.95 - 81.4%<td>
+    </tr>
+    <tr>
+      <td scope="row">Frost Nova</td>
+      <td>1.5/3.5/3*0.95 - 13.57%<td>
+    </tr>
+    <tr>
+      <td scope="row">Cone of Cold</td>
+      <td>1.5/3.5/3*0.95 - 13.57%<td>
+    </tr>
+    <tr>
+      <td scope="row">Blizzard</td>
+      <td>3.5/3.5/3 - 33% - 4.125% per tick<td>
+    </tr>
+    <tr>
+      <td scope="row">Arcane Explosion</td>
+      <td>1.5/3.5/3 - 14.28%<td>
+    </tr>
+    <tr>
+      <td scope="row">Arcane Missiles</td>
+      <td>3.5/3.5 - 100% - 20% per missile (5)<td>
+    </tr>
+    <tr>
+      <td scope="row">Ice Barrier</td>
+      <td>0.1 - 10%<td>
+    </tr>
+  </tbody>
+</table>
+        <h4>Intellect</h4><p class ="maintext">Intellect provides two things to mages,
+        mana and critical strike chance. At level 60 1 Int = 15
+        mana and 59.5 Int = 1% crit. Critical Hit Chance Critical
+        Hit chance increases the rate at which your spells will hit
+        for a critical (1.5 times normal damage). For example
+        having a 40% critical hit chance means your spells have a
+	40% chance of hitting for 150% of their normal damage.</p>
+        [TODO: WHY CRIT IS SO GOOD FOR FIRE MAGES]
+        <h4>Hit Chance</h4><p class ="maintext">Spells in classic wow have a chance to
+        “miss” the target resulting in a “resist” when you are
+        casting. This chance increases for every level the target
+        is above a caster’s level. Getting extra spell hit can
+        reduce the chance by up to 99%. No matter how much hit you
+        get, vs any level, you will always have a 1% chance for a
+        resist to occur. At 60 vs level 60 targets a mage has a 96%
+        chance to hit a target. By obtaining an extra 3% hit a mage
+        can get their hit to the cap at 99%. Most bosses in raids
+        however are above level 60 and will show as a 💀 instead of
+        a level. Mages have a 17% chance of missing against these
+        targets and must get an additional 16% hit to get to cap.
+        After that additional hit will do no good. Resists are one
+        of the biggest ways to reduce your DPS. Instead of doing
+        ~800 for a normal frost bolt for example if you “miss” you
+        will do 0. This is why hit chance is worth so much in terms
+        of spell Power. With both specs in this doc the talent
+        points in Elemental Precision give 6% extra hit so mages
+        need to get 10% hit from gear to get their max. Depending
+        on the addon you are using to show your spell hit chance it
+        may or may not be taking the hit from talents into
+	consideration when displaying your spell hit chance.</p>
+        <h4>Putting It All Together</h4><p class ="maintext">Frost has useful tables and
+	spreadsheets <a href = "https://docs.google.com/spreadsheets/d/1WgQzyXeemIGIlY6GXIEZtYDa8vEFr5FxsPuaeFf9ZxA/edit#gid=0">like this one</a> to help determine which pieces
+        of gear are an upgrade. Eventually I plan on building or
+        finding something similar to fire. Theorycrafters in the
+        mage discord are working on building the weights for
+	different stats as you can <a href ="https://github.com/ronkuby-mage/fire-mage-simulation">see here</a>. Because of ignite the
+        way that crit and hit are weighted especially crit can
+        fluctuate depending on the number of mages in a raid and
+        which/how many world buffs you have and the hit percent
+        across all the mages. The more mages and more world buffs
+        you have the less valuable crit/hit becomes. Crit varies
+        from 10 - 20 SP per 1% crit and hit can be from 10 - 17 SP
+        per 1% hit depending on the number of mages, world buffs,
+	and crit percent for each mage.</p>
+        <h2>Consumables</h2><p class ="maintext">Our guild does not currently require
+        DPS to use consumables but they can make a big difference
+        on your performance in raids. The Buffs & Consumables sheet
+        on this google sheet is a good reference. If we start to
+        struggle in AQ or Naxx they could become a requirement.
+	I’ll call out a couple that are super important. </p>
+	<div class="media" style="border:1px solid #000000;">
+  <img class="mr-3" src="{%static "web/inv_potion_62.jpg" %}" alt="Limited Invulnerability Potion" >
+  <div class="media-body">
+    <h5 class="mt-0">Limited Invulnerability Potion(LIP)</h5>
+   Use: Imbiber is immune to physical attacks for the next 6 sec. (cooldown 2 min)</div>
 </div>
-</div>
-</div>
-{% endblock %}
+        <p class ="maintext">LIPs
+        are very important because in addition to making you
+        invulnerable your aggro is temporarily dropped to 0 while
+        the potion is active (6 seconds). This gives your tank some
+        time to get their aggro back above yours. However you
+        should know any aggro you generate during those 6 seconds
+        will come back on top of whatever you had when the potion
+        went active. In practice this means when you pull aggro you
+        should: 1) Take a LIP 2) Stop DPSing and hope the tank
+	gets ahead of you in aggro in the next 6 seconds.</p>
+	<p class ="maintext"> [MANA GEMS
+	PLACEHOLDER]</p>
+	<h2>Enchants</h2><p class ="maintext">The enchant sheet <a href="https://docs.google.com/document/d/11S-8haKsc1hOXzTUhNhQ_vKDq1Y7HLC3bfC6ZHZMd7s/edit#">on this google sheet </a> is
+        a good reference to refer to when determining which
+        enchants you should get. The most impactful enchants for
+	your gear are the <a href="https://classicdb.ch/?item=19787">Presence of Sight</a> enchants from the
+	Zul'Gurub but I encourage mages to get them all as every bit helps.</p>
+        <h2>Addons & Weak Auras</h2> 
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Addon</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+	    <td scope="row"><a href ="https://www.curseforge.com/wow/addons/deadly-boss-mods">Deadly Boss Mods</a></td>
+      <td>Every raider should have this addon. This gives you timers, warnings, etc to help keep track of things in a raid. </td>
+    </tr>
+    <tr>
+      <td scope="row"><a href ="https://www.curseforge.com/wow/addons/details-damage-meter-classic-wow">Details!</a></td>
+      <td>Primarily a DPS meter the most important functionality this provides is via a plugin, Tiny Threat a threat meter. Make sure you enable it.</td>
+    </tr>
+    <tr>
+      <td scope="row"><a href ="https://wago.io/L0f-JTpo7">Ignite Tracker (Weak Aura)</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td scope="row"><a href ="https://www.curseforge.com/wow/addons/extended-character-stats">Extended Character Stats</a></td>
+      <td>Addon which shows more stats than the normal character screen including what your total hit percent is and extra damage by spell type.</td>
+    </tr>
+    <tr>
+      <td scope="row"><a href ="https://www.curseforge.com/wow/addons/atlaslootclassic">AtlastLootClassic</a></td>
+      <td>This addon allows you to see which bosses drop which pieces of gear from which boss in Classic.</td>
+    </tr>
+  </tbody>
+</table>
+        should have this addon. This gives you timers, warnings,
+        etc to help keep track of things in a raid. Details! - This
+        is a DPS tracking addon but the most important
+        functionality that it provides is a plugin, a threat meter
+        called Tiny Threat. Make sure you enable it. Ignite Tracker
+        (Weak Aura) Extended Character Stats - Addon which shows
+        more stats than the normal character screen including what
+        your total hit percent is and extra damage by spell type.
+        AtlasLootClassic - This addon allows you to see which
+        bosses drop which pieces of gear from the raids in Classic.
+        <h2>Credits</h2>As noted above I put this information
+        together from various sources. I’ll list them below.
+        Wowhead VanillaWow DB Mage Discord - Special thanks to
+        @Always, @Twizzles, ronkubymage {% endblock %}
+      </div>
+    </div>
+  </div>

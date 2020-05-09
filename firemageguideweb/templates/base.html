@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% block js %}{% endblock %}
-  <!-- Font Awesome CSS, research this to see if it is the right way to do it. -->
+  <!-- Font Awesome CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
@@ -51,35 +51,14 @@ Below are the javascript files needed for Bootstrap 4 to work correctly.
 </head>
 <body data-spy="scroll" data-target="#toc" position: relative;>
   <title>{% block title %}{% endblock %}</title>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button><div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/tour">Fire Mage Guide</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/whytrack">About</a>
-      </li>
-      <li class="nav-item active dropdown ">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role ="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	Contact
-	</a>
-	<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="https://github.com/discocorg/firemageguide/issues">Report an issue</a>
-          <a class="dropdown-item" href="#">General Feedback</a>
-	</div>
-      </li>
-    </ul>
-  </div>
-</nav>
+  <div class ="container">
  {% block body %} {% endblock %}
   <footer class ="footer">
-    <div class="container text-center">
-      <p class="text-muted credit" style="color:#fff">Created by Discocorg. Pardon the dust, this site is a work in progress!</p>
+    <div class=" container text-center">
+	    <p class="text-muted credit" style="color:#fff">Created by <a href"https://github.com/discocorg" >Discocorg </a>. Pardon the dust, this site is a work in progress!</p>
     </div>
   </footer>
+  </div>
 </body>
 </html>
 
