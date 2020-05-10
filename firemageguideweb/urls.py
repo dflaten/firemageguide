@@ -27,6 +27,6 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    re_path('', include(web_urls)),
+        re_path('https://www.classicwowmageguide.com/', include(web_urls)),
 ]
 
