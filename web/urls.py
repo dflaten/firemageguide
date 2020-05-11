@@ -4,4 +4,3 @@ from web.views import index
 urlpatterns = [
     path('', index)
 ]
-
