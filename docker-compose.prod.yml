@@ -28,3 +28,5 @@
         - 1337:80
       depends_on:
         - web
+  volumes:
+    static_volume:
